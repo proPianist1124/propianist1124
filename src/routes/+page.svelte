@@ -29,10 +29,12 @@
 <p style = "color: var(--color-secondary);">
     I am a nextjs and sveltekit fullstack software developer. I enjoy developing web applications/PWAs. This is my third year programming and I am still learning new things everyday.
 </p>
-{#each socials as social}
-    <a href = {social.link} style = "text-decoration: none; margin-right: 5px;">
-        <button>
-            {social.name}
-        </button>
-    </a>
-{/each}
+<div style = "display: flex; align-items: center;">
+    {#each socials as social}
+        <a href = {social.link} style = "text-decoration: none; margin-right: 5px;">
+            <button>
+                {social.name}
+            </button>
+        </a>
+    {/each}
+</div>
