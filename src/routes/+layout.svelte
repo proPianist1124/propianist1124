@@ -21,6 +21,9 @@
         </li>
     </ul>
 </nav>
-<main>
+<main style = "padding-bottom: 50px;">
     <slot />
 </main>
+<footer>
+    Made with ❤️ by <a href = "https://github.com/propianist1124/propianist1124" target = "_blank">proPianist1124</a>
+</footer>
