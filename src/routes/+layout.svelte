@@ -21,7 +21,7 @@
         </li>
     </ul>
 </nav>
-<main style = "padding-bottom: 50px;">
+<main>
     <slot />
 </main>
 <footer>

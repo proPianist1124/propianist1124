@@ -32,16 +32,16 @@
 </svelte:head>
 
 <h3>Admin Panel</h3>
-{#if data.admin == false}
+{#if data.access == false}
     <form on:submit|preventDefault = {login} autocomplete = "off" spellcheck = "false" style = "display: flex; align-items: center;">
         <input name = "code" placeholder = "Enter code…"/>
         <button type = "submit" style = "margin-left: 5px;">
-            <svg xmlns="http://www.w3.org/2000/svg" width = "16" height = "16" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" stroke-width = "2" stroke-linecap = "round" stroke-linejoin = "round">
+            <svg xmlns = "http://www.w3.org/2000/svg" width = "16" height = "16" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" stroke-width = "2" stroke-linecap = "round" stroke-linejoin = "round">
                 <circle cx = "7.5" cy = "15.5" r = "5.5" />
                 <path d = "m21 2-9.6 9.6" />
                 <path d = "m15.5 7.5 3 3L22 7l-3-3" />
             </svg>
-            &nbsp;Access
+            &nbsp;Shop
         </button>
     </form>
     <p style = "color: var(--danger">{error}</p>
