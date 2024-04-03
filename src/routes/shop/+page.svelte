@@ -4,7 +4,7 @@
     export let data
 
     const inputs = ["name", "description", "price"]
-    const categories = ["physical", "information", "video", "article", "site", "download", "code"]
+    const categories = ["physical", "information", "video", "service", "article", "site", "download", "code"]
     let showModal = false
     let error = ""
 
@@ -80,8 +80,16 @@
         Become an affliate! <a href = "mailto:invisible.horse1124@proton.me">Contact us</a> to learn more!
     </p>
 {:else}
-    <h3>Shop</h3>
-    <div style = "display: grid; grid-template-columns: auto auto auto; overflow-x: auto;">
+    <h3 style = "display: flex; align-items: center;">
+        Shop
+        <select style = "margin-left: auto;">
+            <option value = "all">all</option>
+            {#each categories as category}
+                <option value = {category}>{category}</option>
+            {/each}
+        </select>
+    </h3>
+    <div class = "grid">
         {#each data.shop as item}
             <a href = "/shop/{item.id}" style = "color: currentColor; text-decoration: none;">
                 <div class = "card" style = "margin-right: 10px;">
@@ -96,7 +104,7 @@
                         <p style = "color: var(--color-secondary);">
                             {item.description}
                         </p>
-                        <div class = "badge">
+                        <div class = "badge" style = "margin-left: 10px;">
                             {item.category}
                         </div>
                     </div>
@@ -141,3 +149,16 @@
         </p>
     </Modal>
 {/if}
+
+<style>
+    div.grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        overflow-x: auto;
+    }
+    @media screen and (max-width: 800px) {
+        div.grid {
+            display: block;
+        }
+    }
+</style>

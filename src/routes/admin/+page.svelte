@@ -28,7 +28,7 @@
 </script>
 
 <svelte:head>
-    <title>Admin Panel</title>
+    <title>admin</title>
 </svelte:head>
 
 {#if data.access == false}
@@ -46,7 +46,7 @@
     </form>
     <p style = "color: var(--danger">{error}</p>
 {:else}
-    <h3>Admin Panel</h3>
+    <h3>Welcome back, <i>proPianist1124</i></h3>
     <hr />
     <h4>New Blog Post</h4>
     <form on:submit|preventDefault = {create_post} autocomplete = "off">

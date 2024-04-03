@@ -29,8 +29,6 @@
         res = await res.json()
 
         if (res.success) {
-            showModal = false
-            showModal = showModal
             success = "Your purchase was successful. You will be contacted shortly."
         }
     }
@@ -52,6 +50,7 @@
     </div>
 </div>
 <img src = {data.item.image} width = "300" height = "300" alt = {data.item.name} style = "display: block; margin: auto;" />
+<p style = "text-align: center; color: var(--color-secondary);">{data.item.description}</p>
 <div style = "display: flex; align-items: center; justify-content: center; margin-top: 20px;">
     {#if data.admin == true}
         <button on:click = {delete_item} class = "danger" style = "margin-right: 8px;">

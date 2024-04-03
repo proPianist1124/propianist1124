@@ -9,7 +9,7 @@ export async function POST({ request, cookies }) {
     if (passkey == null || passkey.length === 0) {
         return json({ error: "Invalid passkey. Please try again." })
     } else {
-        cookies.set("shop", formData.passkey, { path: "/" })
+        cookies.set("shop", formData.passkey, { path: "/", maxAge: 300 })
         return json({ success: true })
     }
 }
