@@ -31,10 +31,10 @@
     <title>Admin Panel</title>
 </svelte:head>
 
-<h3>Admin Panel</h3>
 {#if data.access == false}
-    <form on:submit|preventDefault = {login} autocomplete = "off" spellcheck = "false" style = "display: flex; align-items: center;">
-        <input name = "code" placeholder = "Enter code…"/>
+    <h3 style = "text-align: center;">Login to Admin Panel</h3>
+    <form on:submit|preventDefault = {login} autocomplete = "off" spellcheck = "false" style = "display: flex; align-items: center; justify-content: center; overflow-x: auto;">
+        <input name = "code" placeholder = "Enter code…" />
         <button type = "submit" style = "margin-left: 5px;">
             <svg xmlns = "http://www.w3.org/2000/svg" width = "16" height = "16" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" stroke-width = "2" stroke-linecap = "round" stroke-linejoin = "round">
                 <circle cx = "7.5" cy = "15.5" r = "5.5" />
@@ -46,6 +46,7 @@
     </form>
     <p style = "color: var(--danger">{error}</p>
 {:else}
+    <h3>Admin Panel</h3>
     <hr />
     <h4>New Blog Post</h4>
     <form on:submit|preventDefault = {create_post} autocomplete = "off">
@@ -61,7 +62,6 @@
             &nbsp;Create Blog Post
         </button>
     </form>
-    <br><br>
     <hr />
     <a href = "/api/logout" style = "text-decoration: none;">
         <button class = "danger">
