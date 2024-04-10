@@ -4,7 +4,7 @@
     export let data
 
     async function login(event) {
-        let res = await fetch("/api/admin", {
+        let res = await fetch("/api/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -41,10 +41,10 @@
                 <path d = "m21 2-9.6 9.6" />
                 <path d = "m15.5 7.5 3 3L22 7l-3-3" />
             </svg>
-            &nbsp;Shop
+            &nbsp;Login
         </button>
     </form>
-    <p style = "color: var(--danger">{error}</p>
+    <p style = "text-align: center; color: var(--danger);">{error}</p>
 {:else}
     <h3>Welcome back, <i>proPianist1124</i></h3>
     <hr />

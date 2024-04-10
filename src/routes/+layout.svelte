@@ -11,13 +11,10 @@
     </a>
     <ul>
         <li>
-            <a href = "/blog">Blog</a>
+            <a href = "/blog">blog</a>
         </li>
         <li>
-            <a href = "/shop">Shop</a>
-        </li>
-        <li>
-            <a href = "/admin">Admin</a>
+            <a href = "/admin">admin</a>
         </li>
     </ul>
 </nav>

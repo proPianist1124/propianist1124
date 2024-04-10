@@ -113,21 +113,24 @@ hr {
 main {
     backdrop-filter: blur(2px);
     padding: 0px 10px;
-    align-items: center;
     border: 1px solid var(--background-lighter);
     padding: 20px;
     border-radius: var(--border-radius);
+    width: 70%;
+    margin: auto;
 }
 
 nav {
     backdrop-filter: blur(2px);
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
+    margin: auto;
     align-items: center;
     border: 1px solid var(--background-lighter);
     margin-bottom: 30px;
     padding: 0px 10px;
     border-radius: var(--border-radius);
+    width: 70%;
 }
   
 nav ul {
