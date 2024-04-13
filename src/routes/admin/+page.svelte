@@ -50,9 +50,9 @@
     <hr />
     <h4>New Blog Post</h4>
     <form on:submit|preventDefault = {create_post} autocomplete = "off">
-        <input placeholder = "title" />
+        <input placeholder = "title" style = "width: 100%;" />
         <br><br>
-        <textarea placeholder = "content"></textarea>
+        <textarea placeholder = "content" style = "width: 100%;"></textarea>
         <br><br>
         <button type = "submit">
             <svg xmlns = "http://www.w3.org/2000/svg" width = "16" height = "16" viewBox = "0 0 24 24" fill = "none" stroke = "currentColor" stroke-width = "2" stroke-linecap = "round" stroke-linejoin = "round">

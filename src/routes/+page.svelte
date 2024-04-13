@@ -39,7 +39,7 @@
     I am a <a href = "https://nextjs.org" target = "_blank">nextjs</a> and <a href = "https://kit.svelte.dev" target = "_blank">sveltekit</a> fullstack software developer. I enjoy developing web applications/PWAs. This is my third year programming and I am still learning new things everyday.
 </p>
 <p style = "color: var(--color-secondary);">
-    I'm currently looking for work. If you are interested in hiring me to build a personal site with the tech stack of your chocie or even a small webapp, don't hesitate to contact me through my email or my socials!
+    I'm currently looking for work. If you are interested in hiring me to build a personal site with the tech stack of your choice or even a small webapp, don't hesitate to contact me through my email or my socials!
 </p>
 <div style = "display: flex; align-items: center; margin-top: 30px; overflow-x: auto;">
     {#each socials as social}
