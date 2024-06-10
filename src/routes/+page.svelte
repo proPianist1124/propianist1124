@@ -55,7 +55,7 @@
             Blog
         </h3>
         {#each data.blog as blog}
-            <a href = "/blog/{blog.title}" style = "display: block; color: var(--secondary);">
+            <a href = "/blog/{blog.title}" style = "display: block;">
                 {blog.title}
             </a>
         {/each}
@@ -65,7 +65,7 @@
             Connect
         </h3>
         {#each socials as social}
-            <p class = "">
+            <p>
                 {social.name}
                 <a href = {social.link} target = "_blank" style = "float:right">
                     {social.alias}

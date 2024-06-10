@@ -1,29 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 :root {
-    --text: #000;
-    --secondary: #5d5d5d;
+    --header: #000;
+    --text: #5d5d5d;
+    --primary: #1e90ff;
+    --secondary: #a0a0a0;
     --tertiary: #efefef;
-    --link: #a0a0a0;
 }
 
 body {
-    color: var(--secondary);
+    color: var(--text);
     font-family: "PT Serif", serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 550;
-    color: var(--text);
+    color: var(--header);
     font-family: "PT Serif", serif;
     margin-bottom: 5px;
 }
 
 a {
-    color: var(--link);
+    color: var(--primary);
+    text-decoration: none;
 }
 a:hover {
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 main {
@@ -37,7 +43,7 @@ section {
 }
 
 button {
-    border: 1px solid var(--link);
+    border: 1px solid var(--secondary);
     background-color: var(--tertiary);
     font-family: "Open Sans", sans-serif;
     padding: 5px 10px;
