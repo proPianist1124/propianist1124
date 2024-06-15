@@ -17,7 +17,7 @@
                     <button >Go Back</button>
                 </a>
             </h2>
-            Welcome to my blog! Happy reading you fanum tax ohio sigma! 📚
+            Welcome to my blog! Happy reading! 📚
         </section>
         <section>
             <h3>
