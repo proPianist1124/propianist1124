@@ -1,15 +1,11 @@
-import { sql } from "$lib/postgres"
+import fs from "fs";
 
 export async function load({ params }) {
-    const post = await sql`SELECT * FROM propianist1124_blog WHERE title = ${params.post}`
-
-    if (post == null || post.length === 0) {
-        return {
-            post: null
-        }
-    }
+    const date = fs.readdirSync("src/lib/blog").filter(post => post === params.post)[0];
 
     return {
-        post: post[0]
+        date,
+        title: fs.readdirSync(`src/lib/blog/${date}`)[0].split(".md")[0],
+        content: fs.readFileSync(`src/lib/blog/${date}/${fs.readdirSync(`src/lib/blog/${date}`)}`, "utf-8")
     }
 }

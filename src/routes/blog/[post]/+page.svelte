@@ -1,33 +1,31 @@
 <script>
-    import Error from "../../+error.svelte"
+    import SvelteMarkdown from "svelte-markdown";
 
-    export let data
+    export let data;
+
+    const source = data.content;
 </script>
 
 <svelte:head>
-    <title>{data.post.title}</title>
+    <title>post title</title>
 </svelte:head>
 
-{#if data.post != null}
-    <main>
-        <section>
-            <h2 style = "display: flex; align-items: center;">
-                My Blog
-                <a href = "/" style = "margin-left: auto;">
-                    <button >Go Back</button>
-                </a>
-            </h2>
-            Welcome to my blog! Happy reading! 📚
-        </section>
-        <section>
-            <h3>
-                {data.post.date} | {data.post.title}
-            </h3>
-            <p style = "color: var(--color-secondary);">
-                {data.post.content}
-            </p>
-        </section>
-    </main>
-{:else}
-    <Error />
-{/if}
+<main>
+    <section>
+        <h2 style = "display: flex; align-items: center;">
+            My Blog
+            <a href = "/" style = "margin-left: auto;">
+                <button >Go Back</button>
+            </a>
+        </h2>
+        Welcome to my blog! Happy reading! 📚
+    </section>
+    <section>
+        <h3>
+            {data.date} | {data.title}
+        </h3>
+        <p style = "color: var(--color-secondary);">
+            <SvelteMarkdown {source} />
+        </p>
+    </section>
+</main>

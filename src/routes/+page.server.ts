@@ -1,9 +1,14 @@
-import { sql } from "$lib/postgres";
+import fs from "fs";
 
 export async function load() {
-    const blog = await sql`SELECT * FROM propianist1124_blog;`;
+    const blog = fs.readdirSync("src/lib/blog").map(date => {
+        return {
+            title: fs.readdirSync(`src/lib/blog/${date}`)[0].split(".md")[0],
+            date
+        };
+    });
 
     return {
-        blog: blog.reverse()
+        blog
     }
 }

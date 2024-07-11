@@ -40,7 +40,8 @@
         <h3>
             Work
         </h3>
-        I'm currently a freelance developer building a messenger app. I can build <b>you</b> a small webapp with
+        I'm currently a freelance developer building a programming language. I'm currently at <a href = "https://github.com/diaboli-systems" target = "_blank">Diaboli Systems</a>.
+        If you're looking to join an organization building FOSS shit, hit me up.
         <ul>
             <li>Express</li>
             <li>React</li>
@@ -48,14 +49,13 @@
             <li>Next.js</li>
             <li>HTML, CSS, JS</li>
         </ul>
-        for a reasonable price (something along the lines of $15 - $30).
     </section>
     <section>
         <h3>
             Blog
         </h3>
         {#each data.blog as blog}
-            <a href = "/blog/{blog.title}" style = "display: block;">
+            <a href = "/blog/{blog.date}" style = "display: block; width: fit-content;">
                 {blog.title}
             </a>
         {/each}
