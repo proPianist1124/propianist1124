@@ -2,6 +2,11 @@
 	"name": "propianist1124",
 	"version": "0.0.1",
 	"private": true,
+	"brower": {
+		"fs": false,
+		"os": false,
+		"path": false
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
