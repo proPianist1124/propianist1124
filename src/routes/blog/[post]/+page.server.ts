@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "node:fs";
 
 export async function load({ params }) {
     const date = fs.readdirSync("src/lib/blog").filter(post => post === params.post)[0];
