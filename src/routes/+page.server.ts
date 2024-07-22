@@ -1,4 +1,4 @@
-import fs from "node:fs";
+/* import fs from "node:fs";
 
 export async function load() {
     const blog = fs.readdirSync("src/lib/blog").map((date: string) => {
@@ -11,4 +11,4 @@ export async function load() {
     return {
         blog
     }
-}
+} */

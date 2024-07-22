@@ -1,11 +1,3 @@
-<script>
-    import SvelteMarkdown from "svelte-markdown";
-
-    export let data;
-
-    const source = data.content;
-</script>
-
 <svelte:head>
     <title>post title</title>
 </svelte:head>
@@ -22,10 +14,10 @@
     </section>
     <section>
         <h3>
-            {data.date} | {data.title}
+            <b>blog date</b> | <b>blog title</b>
         </h3>
         <p style = "color: var(--color-secondary);">
-            <SvelteMarkdown {source} />
+            <i>COMING SOON!</i>
         </p>
     </section>
 </main>

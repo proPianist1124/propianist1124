@@ -1,6 +1,4 @@
 <script>
-    export let data;
-
     const socials = [
         {
             name: "Twitter",
@@ -54,11 +52,9 @@
         <h3>
             Blog
         </h3>
-        {#each data.blog as blog}
-            <a href = "/blog/{blog.date}" style = "display: block; width: fit-content;">
-                {blog.title}
-            </a>
-        {/each}
+        <a href = "/blog/1-1-2024" style = "display: block; width: fit-content;">
+            placeholder
+        </a>
     </section>
     <section>
         <h3>
