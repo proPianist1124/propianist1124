@@ -5,16 +5,16 @@
 
 <nav>
     <a href="/">
-        <div>Home</div>
+        <div>home</div>
     </a>
     <a href="/photos">
-        <div>Photos</div>
+        <div>photos</div>
     </a>
     <a href="/contact">
-        <div>Contact</div>
+        <div>contact</div>
     </a>
     <a href="/guestbook">
-        <div>Guestbook</div>
+        <div>guestbook</div>
     </a>
 </nav>
 <main style={$page.url.pathname != "/photos" ? "max-width: 550px;" : "max-width: 1000px"}>

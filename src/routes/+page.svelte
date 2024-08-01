@@ -5,6 +5,18 @@
     "Sveltekit",
     "Next.js",
     "HTML, CSS, JS",
+    "SQLite",
+    "Postgresql",
+    "Supabase",
+    "Prisma",
+    "Drizzle",
+    "TailwindCSS",
+    "Sass",
+    "Tauri",
+    "Electron",
+    "Python",
+    "Vercel",
+    "Render"
   ];
 </script>
 
