@@ -5,19 +5,28 @@
 }
 
 :root {
-    --header: #000;
-    --text: #5d5d5d;
+    --bg: #101313;
+    --bg-lighter: #171a1a;
+    --bg-lightest: #1f2020;
+    --header: #E1D9D1;
+    --text: #aca6a1;
     --primary: #ff8400;
     --secondary: #a0a0a0;
     --tertiary: #efefef;
 }
 
 body {
+    background-color: var(--bg);
     color: var(--text);
     font-family: "PT Serif", serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 550;
     color: var(--header);
     font-family: "PT Serif", serif;
@@ -25,32 +34,52 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: var(--primary);
     text-decoration: none;
+    color: var(--text);
 }
+
+a.primary {
+    color: var(--primary);
+}
+
 a:hover {
     text-decoration: underline;
 }
 
-main {
-    margin: auto;
-    max-width: 550px;
-    padding: 25px;
+a.button {
+    padding: 2px;
 }
 
 section {
     margin-bottom: 35px;
 }
 
+input, textarea {
+    display: block;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--bg-lightest);
+    background-color: var(--bg-lighter);
+    padding: 5px;
+    color: var(--header);
+    font-family: "Open Sans", sans-serif;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary);
+}
+
 button {
-    border: 1px solid var(--secondary);
-    background-color: var(--tertiary);
+    background-color: var(--bg-lighter);
+    color: var(--header);
+    border: 2px solid var(--bg-lightest);
+    border-radius: 10px;
     font-family: "Open Sans", sans-serif;
     padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
     transition: 0.1s;
 }
+
 button:hover {
-    border-color: var(--text);
+    color: var(--text);
 }
