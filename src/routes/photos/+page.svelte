@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from "svelte";
+
     const photos = [
         {
             name: "ferrari",
@@ -44,7 +46,28 @@
             name: "timessquare",
             src: "/photos/layer3/timessquare.jpeg",
         },
-    ]
+    ];
+
+    onMount(() => {
+        // hide dialog on backdrop click
+        const dialog = document.getElementById("photo-preview");
+        dialog.addEventListener("click", function (event) {
+            const rect = dialog.getBoundingClientRect();
+            const isInDialog =
+                rect.top <= event.clientY &&
+                event.clientY <= rect.top + rect.height &&
+                rect.left <= event.clientX &&
+                event.clientX <= rect.left + rect.width;
+            if (!isInDialog) {
+                dialog.close();
+            }
+        });
+    });
+
+    function openModal(photo) {
+        document.getElementById("photo-preview").showModal();
+        document.querySelector("img#preview").src = photo;
+    }
 </script>
 
 <svelte:head>
@@ -54,12 +77,39 @@
 <div class="grid">
     {#each photos as photo}
         <div class="item">
-            <img src={photo.src} alt={photo.name} />
+            <!-- svelte-ignore a11y-click-events-have-key-events -->
+            <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+            <img
+                on:click={() => openModal(photo.src)}
+                src={photo.src}
+                alt={photo.name}
+            />
         </div>
     {/each}
 </div>
+<dialog id="photo-preview">
+    <img
+        id="preview"
+        style="object-fit: cover; width: 100%; height: 100%;"
+        alt="asdf"
+    />
+</dialog>
 
 <style>
+    dialog {
+        width: fit-content;
+        max-width: 500px;
+        padding: 0px;
+        outline: none;
+        background-color: transparent;
+        border: none;
+        border-radius: 10px;
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
     div.grid {
         width: 100%;
         max-width: 1500px;
@@ -70,12 +120,22 @@
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: auto;
         grid-template-areas:
-            "hero hero hero hero aside2 aside2"
-            "hero hero hero hero aside2 aside2"
-            "hero hero hero hero aside2 aside2"
-            "hero hero hero hero aside2 aside2"
+            "hero hero hero aside2 aside2 aside2"
+            "hero hero hero aside2 aside2 aside2"
+            "hero hero hero aside2 aside2 aside2"
+            "hero hero hero aside2 aside2 aside2"
             "aside3 aside3 aside4 aside4 aside5 aside5 ";
     }
+
+    div.grid div.item img {
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    div.grid div.item img:hover {
+        transform: scale(1.05);
+    }
+
     div.item {
         border: 2px solid var(--bg-lightest);
         border-radius: 5px;
@@ -92,39 +152,29 @@
         border-radius: 10px;
     }
 
-    .grid .item:nth-child(1) {
+    div.grid div.item:nth-child(1) {
         grid-area: hero;
     }
-    .grid .item:nth-child(2) {
+
+    div.grid div.item:nth-child(2) {
         grid-area: aside2;
     }
 
-    .grid .item:nth-child(3) {
+    div.grid div.item:nth-child(3) {
         grid-area: aside3;
     }
-    .grid .item:nth-child(4) {
+
+    div.grid div.item:nth-child(4) {
         grid-area: aside4;
     }
 
-    .grid .item:nth-child(5) {
+    div.grid div.item:nth-child(5) {
         grid-area: aside5;
-    }
-
-    /* tablet screens */
-    @media screen and (max-width: 1000px) {
-        .grid {
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-areas:
-                "hero   hero   hero   hero"
-                "hero   hero   hero   hero"
-                "aside2 aside2 aside2 aside3"
-                "aside4 aside4 aside5 aside5";
-        }
     }
 
     /* mobile screens */
     @media screen and (max-width: 750px) {
-        .grid {
+        div.grid {
             grid-template-columns: repeat(3, 1fr);
             grid-template-areas:
                 "hero   hero   hero"
