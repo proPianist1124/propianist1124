@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --background: #262626;
+    --background-lighter: #3e3e3e;
+    --background-lightest: #505050;
+    --text-color: #d3d2d2;
+    --text-color-darker: #b3b3b3;
+    --accent-1: #e76ece;
+    --accent-2: #6e8ae7;
+    --accent-3: #6ee780;
+    --accent-4: #e7dd6e;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--background-lighter);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--background-lightest);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: "Noto Serif", serif;
+    margin: 45px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+}
+
+input,
+button,
+textarea {
+    padding: 10px;
+    outline: none;
+    background-color: var(--background);
+    color: var(--text-color);
+    border: 1px solid var(--background-lighter);
+    border-radius: 5px;
+    font-family: "Noto Serif", serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.accent1:hover {
+    border-color: var(--accent-1);
+    color: var(--accent-1);
+}
+
+button.accent2:hover {
+    border-color: var(--accent-2);
+    color: var(--accent-2);
+}
+
+button.accent3:hover {
+    border-color: var(--accent-3);
+    color: var(--accent-3);
+}
+
+button.accent4:hover {
+    border-color: var(--accent-4);
+    color: var(--accent-4);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--accent-4);
+}
+
+main {
+    width: 500px;
+    margin: auto;
+}
+
+dialog {
+    background-color: var(--background);
+    outline: none;
+    color: var(--text-color);
+    border: 1px solid var(--background-lighter);
+    width: 400px;
+}
+
+dialog[open]::backdrop {
+    background-color: #00000080;
+}
+
+hr {
+    border: 0.5px solid var(--background-lighter);
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color-darker);
+    width: fit-content;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+div.tooltip {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+div.tooltip span.tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: var(--background-lighter);
+    border: 1px solid var(--background-lightest);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    margin-left: 50px;
+    font-size: 12px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+div.tooltip:hover span.tooltiptext {
+    visibility: visible;
+}

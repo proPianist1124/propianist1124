@@ -3,8 +3,8 @@
 
     const photos = [
         {
-            name: "ferrari",
-            src: "/photos/layer1/ferrari.jpeg",
+            name: "sequoia",
+            src: "/photos/layer1/sequoia.jpeg",
         },
         {
             name: "jordans",
@@ -90,7 +90,7 @@
 <dialog id="photo-preview">
     <img
         id="preview"
-        style="object-fit: cover; width: 100%; height: 100%;"
+        style="object-fit: cover; width: 100%; height: 100%; border-radius: 10px;"
         alt="asdf"
     />
 </dialog>
