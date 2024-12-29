@@ -1,7 +1,7 @@
 # 👋 I'm proPianist1124
 
 ## What am I
-i am very cool yes very yes i eat poop fear me
+chicken
 
 ## Who am I
 I&apos;m a fullstack developer with experience in…
