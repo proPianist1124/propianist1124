@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import favicon from "$lib/assets/favicon.ico";
     import Review from "$lib/review.svelte";
 
     onMount(() => {
@@ -22,6 +21,28 @@
             }
         });
     });
+
+    let error = false;
+
+    async function contactForm(e) {
+        const data = Object.fromEntries(new FormData(e.target));
+
+        error = false;
+
+        if (!data.name || !data.email || !data.message) {
+            error = true;
+        } else {
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            }).then((res) => res.json());
+
+            console.log(res);
+        }
+    }
 </script>
 
 <svelte:head>
@@ -33,7 +54,7 @@
         proPianist1124
         <div class="tooltip">
             <img
-                src={favicon}
+                src="/favicon.ico"
                 width="35"
                 height="35"
                 style="border: 1px solid #3e3e3e; border-radius: 50px; cursor: pointer;"
@@ -129,7 +150,14 @@
     </div>
     <hr />
     <h3 style="color: var(--accent-4);">contact</h3>
-    <form>
+    {#if error}
+        <div
+            class="alert"
+        >
+            Please fill in all fields!
+        </div>
+    {/if}
+    <form on:submit|preventDefault={contactForm}>
         <div
             style="display: flex; align-items: center; width: 100%; gap: 10px;"
         >
@@ -158,14 +186,14 @@
         >
     </form>
 </main>
-<dialog id="reviews" style="height: 350px;">
+<dialog id="reviews"> <!-- style="height: 350px;" -->
     <h2 style="margin-bottom: 1px;">Reviews</h2>
     <span style="display: block; font-style: italic; margin-bottom: 20px;"
         >Leave me a review, asshole.</span
     >
-    <!-- <button class="accent2" style="margin: auto;">Sign in with Discord</button> -->
+    <button class="accent2" style="margin: auto;">Sign in with Discord</button>
+    <!-- <Review>hello there</Review>
     <Review>hello there</Review>
     <Review>hello there</Review>
-    <Review>hello there</Review>
-    <Review>hello there</Review>
+    <Review>hello there</Review> -->
 </dialog>

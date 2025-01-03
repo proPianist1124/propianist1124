@@ -1,10 +1,9 @@
 <script>
-    import favicon from "$lib/assets/favicon.ico";
-    import "$lib/assets/style.css";
+    import "$lib/style.css";
 </script>
 
 <svelte:head>
-    <link rel="icon" type="image/x-icon" href={favicon}>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </svelte:head>
 
 <slot />

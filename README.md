@@ -5,16 +5,16 @@ chicken
 
 ## Who am I
 I&apos;m a fullstack developer with experience in…
-1. [Node.js](https://nodejs.org/en) (Express, Brain.js)
+1. [Node.js](https://nodejs.org/en)
 2. [Next.js](https://nextjs.org)
-3. [HTML, CSS, JS](https://developer.mozilla.org/en-US/docs/Glossary/HTML5) (Bootstrap, jQuery)
-4. [React](https://react.dev) (I just know plain React :| )
-5. [Sveltekit](https://kit.svelte.dev) (Built my entire startup with this framework)
+3. [HTML, CSS, JS](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+4. [React](https://react.dev)
+5. [Sveltekit](https://kit.svelte.dev) (Absolutely in love with this framework)
 6. [UI Frameworks](https://www.sencha.com/blog/what-is-ui-frameworks-and-reason-to-use-ui-frameworks/) (TailwindCSS, NextUI, MUI, ShadcnUI)
 7. [Databases](https://www.oracle.com/database/what-is-database/) (Supabase, Neon Postgres, Upstash Redis, Replit DB, SQLite)
 
 ## Where am I active
-I used to be active a lot on [Replit](https://replit.com) (where I first started programming), but I've since quit the platform because of it's goofy changes, including the new storage update and pricier plans with more limitations. Now you can find me mostly developing in [Next.js](https://nextjs.org) and [Sveltekit](https://kit.svelte.dev) on Visual Studio Code (as my primary editor) and deploying products on [Vercel](https://vercel.com).
+I started programming in 2021 with Replit as my main editor. Since then I have moved on from Replit and have started to build more complex products and apps, as well as learning more languages and Javascript frameworks. I am currently with [Diaboli Systems](https://github.com/diaboli-systems).
 
 ## My Stats
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=proPianist1124&theme=cobalt)

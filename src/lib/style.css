@@ -152,3 +152,11 @@ div.tooltip span.tooltiptext {
 div.tooltip:hover span.tooltiptext {
     visibility: visible;
 }
+
+div.alert {
+    border: 1px solid #D8524B;
+    color: #D8524B;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
